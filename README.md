@@ -61,3 +61,7 @@ estimate potential benefits. This needs to happen in real time, so
 requires either an instrumented resolver or a side program which
 watches resolver traffic and does SOA queries alongside it.
 
+Note that if we see an SOA at any time for a zone and it has the same
+serial, we can apply the opportunistic refresh logic for all lookups
+prior to that (thanks to Stephen Morris for the suggestion).
+
